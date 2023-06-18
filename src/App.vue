@@ -30,7 +30,7 @@ function calcula() {
 
   aguarde.innerHTML = ''
   parabens.innerHTML = 'PRBNS!'
-  mostrador.innerHTML = `Voilá! O resultado é incríveis ${estado.resultado}`
+  mostrador.innerHTML = `Voilá! O resultado é incredibles ${estado.resultado}`
 }
 
 </script>
