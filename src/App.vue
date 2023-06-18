@@ -12,22 +12,26 @@ function calcula() {
   var num1 = Number(estado.valor1)
   var num2 = Number(estado.valor2)
   var operacao = document.getElementById('operacao').value
+
   var mostrador = document.getElementById('resultado')
   var aguarde = document.getElementById('aguarde')
   var parabens = document.getElementById('title-parabens')
+
 
   if(operacao === '+') {
     estado.resultado = num1 + num2
   } else if (operacao === '-') {
     estado.resultado = num1 - num2
+  } else if (operacao === '*') {
+    estado.resultado = num1 * num2
+  } else if (operacao === '/') {
+    estado.resultado = num1 / num2
   }
 
   aguarde.innerHTML = ''
   parabens.innerHTML = 'PRBNS!'
   mostrador.innerHTML = `Voilá! O resultado é incríveis ${estado.resultado}`
 }
-
-
 
 </script>
 
@@ -42,6 +46,8 @@ function calcula() {
         <select style="border:1px solid black; padding: 0.5rem; width: 45px;" id="operacao">
           <option value="+">+</option>
           <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
         </select>
         <p>insira outro number</p>
         <input :class="{ bordergreen: estado.valor2 > 0 }" @keyup="evento => estado.valor2 = evento.target.value" style="border:1px solid black; padding: 0.5rem; width: 300px; padding-bottom: 5px;" type="number" id="input2">
